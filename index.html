@@ -1,26 +1,26 @@
+```html
 <!DOCTYPE html>
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>SAGOR DJ Remix Studio</title>
 
 <style>
 *{
+  box-sizing:border-box;
   margin:0;
   padding:0;
-  box-sizing:border-box;
 }
 
 body{
   font-family:Arial,"Noto Sans Bengali",sans-serif;
-  background:#07070b;
-  color:#fff;
-  line-height:1.6;
+  background:#080808;
+  color:white;
+  line-height:1.7;
 }
 
-header{
+.hero{
   min-height:100vh;
   display:flex;
   align-items:center;
@@ -28,170 +28,174 @@ header{
   text-align:center;
   padding:30px 18px;
   background:
-    radial-gradient(circle at top,#35105f 0,#11051d 38%,#07070b 75%);
+    radial-gradient(circle at top,#4b0010 0,#170006 35%,#080808 70%);
 }
 
-.hero{
-  width:100%;
-  max-width:900px;
+.hero-content{
+  max-width:850px;
 }
 
 .logo{
-  width:105px;
-  height:105px;
-  margin:0 auto 20px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:42px;
-  background:linear-gradient(135deg,#ff2bd6,#742cff);
-  box-shadow:0 0 35px #a52cff;
+  font-size:70px;
+  margin-bottom:10px;
 }
 
 h1{
-  font-size:42px;
-  margin-bottom:12px;
-  background:linear-gradient(90deg,#fff,#ff45d7,#9b6cff);
-  -webkit-background-clip:text;
-  color:transparent;
+  font-size:clamp(38px,7vw,72px);
+  font-weight:900;
+  letter-spacing:1px;
+  text-shadow:0 0 25px #ff1744;
 }
 
-.hero p{
+.tagline{
   color:#ddd;
   font-size:18px;
-  margin-bottom:28px;
+  margin:15px 0 30px;
 }
 
 .buttons{
   display:flex;
-  gap:12px;
-  justify-content:center;
   flex-wrap:wrap;
+  gap:14px;
+  justify-content:center;
 }
 
 .btn{
   text-decoration:none;
-  color:#fff;
-  padding:13px 24px;
+  color:white;
+  padding:13px 22px;
   border-radius:30px;
-  background:linear-gradient(90deg,#ff1493,#7928ff);
   font-weight:bold;
-  display:inline-block;
-  box-shadow:0 8px 25px rgba(150,0,255,.3);
+  background:linear-gradient(135deg,#ff1744,#8e001c);
+  box-shadow:0 0 18px #ff174455;
+  transition:.3s;
 }
 
-.btn.secondary{
-  background:#181820;
-  border:1px solid #444;
+.btn:hover{
+  transform:translateY(-3px) scale(1.03);
+  box-shadow:0 0 28px #ff1744aa;
 }
 
 section{
-  padding:65px 18px;
-}
-
-.container{
-  max-width:1050px;
+  padding:70px 20px;
+  max-width:1100px;
   margin:auto;
 }
 
-.title{
+.section-title{
   text-align:center;
-  margin-bottom:38px;
+  font-size:34px;
+  margin-bottom:40px;
+  color:#ff3158;
 }
 
-.title h2{
-  font-size:30px;
-  margin-bottom:8px;
-}
-
-.title p{
-  color:#aaa;
-}
-
-.cards{
+.services{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:18px;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
 }
 
 .card{
-  background:linear-gradient(145deg,#15151e,#0d0d12);
-  border:1px solid #292936;
+  background:linear-gradient(145deg,#171717,#0d0d0d);
+  border:1px solid #333;
   border-radius:20px;
-  padding:28px 20px;
+  padding:28px 22px;
   text-align:center;
   transition:.3s;
 }
 
 .card:hover{
-  transform:translateY(-5px);
-  border-color:#a83cff;
+  transform:translateY(-6px);
+  border-color:#ff1744;
+  box-shadow:0 0 25px #ff174433;
 }
 
 .icon{
-  font-size:40px;
-  margin-bottom:12px;
+  font-size:45px;
+  margin-bottom:10px;
 }
 
 .card h3{
+  font-size:23px;
   margin-bottom:8px;
 }
 
 .card p{
-  color:#aaa;
-  font-size:14px;
+  color:#bbb;
   margin-bottom:18px;
 }
 
-.small-btn{
-  text-decoration:none;
-  color:#fff;
-  border:1px solid #7136ff;
-  padding:8px 16px;
-  border-radius:20px;
+.card a{
   display:inline-block;
+  color:white;
+  text-decoration:none;
+  background:#222;
+  border:1px solid #555;
+  padding:8px 17px;
+  border-radius:20px;
 }
 
 .about{
-  background:#0c0c12;
+  text-align:center;
+  background:#101010;
+  border-radius:25px;
+  padding:45px 25px;
 }
 
-.about-box{
-  max-width:850px;
-  margin:auto;
-  text-align:center;
+.about p{
   color:#ccc;
+  max-width:800px;
+  margin:auto;
+  font-size:17px;
 }
 
-.contact{
-  text-align:center;
-  background:linear-gradient(180deg,#0c0c12,#16051e);
+.social{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:14px;
+  margin-top:25px;
+}
+
+.social a{
+  text-decoration:none;
+  color:white;
+  padding:12px 20px;
+  border-radius:25px;
+  background:#171717;
+  border:1px solid #444;
+}
+
+.social a:hover{
+  border-color:#ff1744;
 }
 
 footer{
   text-align:center;
-  padding:25px 15px;
-  background:#050507;
+  padding:35px 15px;
   color:#888;
-  font-size:14px;
+  border-top:1px solid #222;
+}
+
+footer strong{
+  color:#ff3158;
 }
 
 @media(max-width:600px){
-  h1{
-    font-size:31px;
+  .logo{
+    font-size:55px;
   }
 
-  .hero p{
+  .tagline{
     font-size:16px;
   }
 
   section{
-    padding:48px 15px;
+    padding:55px 15px;
   }
 
-  .title h2{
-    font-size:25px;
+  .section-title{
+    font-size:28px;
   }
 }
 </style>
@@ -199,24 +203,25 @@ footer{
 
 <body>
 
-<header>
-  <div class="hero">
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-content">
 
     <div class="logo">🎧</div>
 
     <h1>SAGOR DJ Remix Studio</h1>
 
-    <p>
+    <p class="tagline">
       বাংলা DJ Remix গান • CapCut Template • AI Video • Creative Projects
     </p>
 
     <div class="buttons">
-      <a class="btn" href="#services">আমাদের কাজ</a>
+      <a class="btn" href="#services">🔥 আমাদের কাজ</a>
 
-      <a class="btn secondary"
-         href="https://www.youtube.com/"
-         target="_blank">
-         ▶ YouTube
+      <a class="btn"
+      href="https://youtube.com/@sagordjremixstudio?si=IAyI-iAMmIRoH7Vs"
+      target="_blank">
+      ▶ YouTube
       </a>
     </div>
 
@@ -224,155 +229,155 @@ footer{
 </header>
 
 
+<!-- SERVICES -->
 <section id="services">
 
-  <div class="container">
+  <h2 class="section-title">🔥 আমাদের সার্ভিস</h2>
 
-    <div class="title">
-      <h2>🔥 আমাদের সার্ভিস</h2>
-      <p>SAGOR DJ Remix Studio-এর Creative World</p>
-    </div>
+  <div class="services">
 
-    <div class="cards">
+    <div class="card">
+      <div class="icon">🎵</div>
+      <h3>DJ Remix Songs</h3>
+      <p>বাংলা DJ Remix ও Puja Special গান।</p>
 
-      <div class="card">
-        <div class="icon">🎵</div>
-        <h3>DJ Remix Songs</h3>
-        <p>
-          বাংলা DJ Remix ও Puja Special গান।
-        </p>
-        <a class="small-btn" href="#">শুনুন</a>
-      </div>
-
-
-      <div class="card">
-        <div class="icon">🎬</div>
-        <h3>CapCut Templates</h3>
-        <p>
-          আমাদের তৈরি করা Creative CapCut Template।
-        </p>
-        <a class="small-btn" href="#">Template দেখুন</a>
-      </div>
-
-
-      <div class="card">
-        <div class="icon">🤖</div>
-        <h3>AI Video</h3>
-        <p>
-          AI দিয়ে তৈরি Cinematic ও Creative Video Project।
-        </p>
-        <a class="small-btn" href="#">ভিডিও দেখুন</a>
-      </div>
-
-
-      <div class="card">
-        <div class="icon">🖼️</div>
-        <h3>Poster & Thumbnail</h3>
-        <p>
-          YouTube, TikTok ও Social Media-এর Creative Design।
-        </p>
-        <a class="small-btn" href="#">Gallery</a>
-      </div>
-
-
-      <div class="card">
-        <div class="icon">📱</div>
-        <h3>Social Media</h3>
-        <p>
-          Facebook, TikTok ও অন্যান্য Social Platform।
-        </p>
-        <a class="small-btn" href="#">Follow করুন</a>
-      </div>
-
-
-      <div class="card">
-        <div class="icon">📺</div>
-        <h3>YouTube Channel</h3>
-        <p>
-          SAGOR DJ Remix Studio-এর Official YouTube Channel।
-        </p>
-        <a class="small-btn"
-           href="https://www.youtube.com/"
-           target="_blank">
-           Subscribe
-        </a>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section class="about">
-
-  <div class="container">
-
-    <div class="title">
-      <h2>💜 আমাদের সম্পর্কে</h2>
-    </div>
-
-    <div class="about-box">
-
-      <p>
-        <strong>SAGOR DJ Remix Studio</strong>
-        একটি Creative Platform যেখানে বাংলা DJ Remix গান,
-        Puja Special Music, CapCut Template, AI Video,
-        Poster এবং বিভিন্ন Digital Creative Project তৈরি করা হয়।
-      </p>
-
-      <br>
-
-      <p>
-        নতুন গান, নতুন Template এবং নতুন Creative Project-এর
-        আপডেট পেতে আমাদের সাথে থাকুন।
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<section class="contact">
-
-  <div class="container">
-
-    <div class="title">
-      <h2>📞 যোগাযোগ</h2>
-      <p>নতুন Project বা Creative কাজের জন্য যোগাযোগ করুন</p>
-    </div>
-
-    <div class="buttons">
-
-      <a class="btn"
-         href="https://www.facebook.com/"
-         target="_blank">
-         Facebook
+      <a href="https://youtube.com/@sagordjremixstudio?si=IAyI-iAMmIRoH7Vs"
+      target="_blank">
+      🎧 গান শুনুন
       </a>
-
-      <a class="btn secondary"
-         href="https://www.tiktok.com/"
-         target="_blank">
-         TikTok
-      </a>
-
     </div>
+
+
+    <div class="card">
+      <div class="icon">🎬</div>
+      <h3>CapCut Templates</h3>
+      <p>আমাদের তৈরি Creative CapCut Template।</p>
+
+      <a href="https://mobile.capcutshare.com/sv2/ZSbgk5atP/"
+      target="_blank">
+      🎬 Template দেখুন
+      </a>
+    </div>
+
+
+    <div class="card">
+      <div class="icon">🤖</div>
+      <h3>AI Video</h3>
+      <p>AI দিয়ে তৈরি Cinematic ও Creative Video Project।</p>
+
+      <a href="#social">
+      🤖 ভিডিও দেখুন
+      </a>
+    </div>
+
+
+    <div class="card">
+      <div class="icon">🖼️</div>
+      <h3>Poster & Thumbnail</h3>
+      <p>YouTube, TikTok ও Social Media-এর Creative Design।</p>
+
+      <a href="https://www.instagram.com/sp.sagor.35?stkn=MWt5MnhzMGxwZGhoeg=="
+      target="_blank">
+      🖼️ Gallery
+      </a>
+    </div>
+
+
+    <div class="card">
+      <div class="icon">📱</div>
+      <h3>Social Media</h3>
+      <p>Facebook, TikTok, Instagram ও অন্যান্য Platform।</p>
+
+      <a href="#social">
+      📱 Follow করুন
+      </a>
+    </div>
+
+
+    <div class="card">
+      <div class="icon">📺</div>
+      <h3>YouTube Channel</h3>
+      <p>SAGOR DJ Remix Studio-এর Official YouTube Channel।</p>
+
+      <a href="https://youtube.com/@sagordjremixstudio?si=IAyI-iAMmIRoH7Vs"
+      target="_blank">
+      🔴 Subscribe
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ABOUT -->
+<section>
+
+  <div class="about">
+
+    <h2 class="section-title">💜 আমাদের সম্পর্কে</h2>
+
+    <p>
+      <strong>SAGOR DJ Remix Studio</strong> একটি Creative Platform
+      যেখানে বাংলা DJ Remix গান, Puja Special Music, CapCut Template,
+      AI Video, Poster এবং বিভিন্ন Digital Creative Project তৈরি করা হয়।
+      <br><br>
+      নতুন গান, নতুন Template এবং নতুন Creative Project-এর আপডেট পেতে
+      আমাদের সাথে থাকুন।
+    </p>
 
   </div>
 
 </section>
 
 
+<!-- SOCIAL -->
+<section id="social">
+
+  <h2 class="section-title">📱 আমাদের সাথে যুক্ত থাকুন</h2>
+
+  <div class="social">
+
+    <a href="https://youtube.com/@sagordjremixstudio?si=IAyI-iAMmIRoH7Vs"
+    target="_blank">
+    ▶ YouTube
+    </a>
+
+    <a href="https://www.facebook.com/share/1HqXJwfZYK/"
+    target="_blank">
+    📘 Facebook
+    </a>
+
+    <a href="https://tiktok.com/@spsagor056"
+    target="_blank">
+    🎵 TikTok
+    </a>
+
+    <a href="https://www.instagram.com/sp.sagor.35?stkn=MWt5MnhzMGxwZGhoeg=="
+    target="_blank">
+    📸 Instagram
+    </a>
+
+    <a href="https://mobile.capcutshare.com/sv2/ZSbgk5atP/"
+    target="_blank">
+    ✂️ CapCut
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
 <footer>
 
-  © 2026 SAGOR DJ Remix Studio  
+  © 2026 <strong>SAGOR DJ Remix Studio</strong>
+
   <br>
-  All Rights Reserved.
+
+  বাংলা DJ Remix • AI Video • CapCut • Creative Projects
 
 </footer>
 
 </body>
 </html>
+```
